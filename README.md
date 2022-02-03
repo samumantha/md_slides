@@ -1,5 +1,7 @@
 ## A recipe for the preparation of [reveal.js-powered](https://github.com/hakimel/reveal.js/) HTML5 presentation
 
+ORIGINALLY FROM https://github.com/yetulaxman/recipe-slideprep
+
 This repository enables the use of  the following plugins on the top of [CSC-customised slide-template](https://github.com/csc-training/slide-template.git):
 
 * [reveal.js-menu](https://github.com/denehyg/reveal.js-menu): Adds a menu to
