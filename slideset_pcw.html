@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Samantha Wittke and Kylli Ek">
+  <title>Point cloud workshop</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://mlouhivu.github.io/static-engine/reveal/3.5.0/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="theme/csc-2016/csc.css" id="theme">
+  <link rel="stylesheet" href="theme/csc-2016/fonts.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'theme/csc-2016/pdf.css' : 'https://mlouhivu.github.io/static-engine/reveal/3.5.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://mlouhivu.github.io/static-engine/reveal/3.5.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section class="slide level1 title-slide" data-background-size="contain" data-background="theme/csc-2016/img/title-en.png">
+  <h1>Point cloud workshop</h1>
+  <p>online</p>
+  <p>Samantha Wittke and Kylli Ek, 08.02.22</p>
+</section>
+
+<section id="practicalities" class="slide level1" data-background-size="contain">
+<h1>Practicalities</h1>
+<ul>
+<li>let's focus on discussions</li>
+<li>no recording</li>
+<li>shared notes and Q&amp;A on HackMD</li>
+<li>breakoutrooms are available</li>
+</ul>
+</section>
+<section id="hackmd" class="slide level1" data-background-size="contain">
+<h1>HackMD</h1>
+<p><br></br> <a href="https://hackmd.io/@GeospatialCSC/pointcloud_workshop"><code>hackmd.io/@GeospatialCSC/pointcloud_workshop</code></a> <br></br></p>
+</section>
+<section id="today" class="slide level1" data-background-size="contain">
+<h1>Today</h1>
+<ul>
+<li>Short intro to CSC resources</li>
+<li>Use cases of point cloud research using CSC resources</li>
+<li>Discussion time</li>
+</ul>
+</section>
+<section id="csc" class="slide level1" data-background-size="contain">
+<h1>CSC</h1>
+<div class="column">
+<ul>
+<li>non-profit state enterprise with special tasks</li>
+<li>owned by Finnish state (70%) and higher education institutions (30%)</li>
+<li>headquaters in Keilaniemi, Espoo</li>
+<li>side offices and supercomputers in Kajaani</li>
+</ul>
+</div>
+<div class="column">
+<p><img src="img/kajaani.png"></p>
+</div>
+</section>
+<section id="csc-services" class="slide level1" data-background-size="contain">
+<h1>CSC services</h1>
+<p><a href="https://research.csc.fi/en/service-catalog"><code>research.csc.fi/en/service-catalog</code></a></p>
+<br></br>
+<div class="column">
+<p><strong>Compute &amp; Analyze</strong></p>
+<ul>
+<li>cPouta / ePouta</li>
+<li>Puhti / Mahti / LUMI</li>
+<li>Notebooks</li>
+</ul>
+</div>
+<div class="column">
+<p><strong>Store, Share &amp; Publish Data</strong></p>
+<ul>
+<li>Allas</li>
+<li>EUDAT</li>
+<li>IDA</li>
+<li>Paituli</li>
+</ul>
+</div>
+</section>
+<section id="why-use-csc-resources" class="slide level1" data-background-size="contain">
+<h1>Why use CSC resources?</h1>
+<p>When own computer is not enough:</p>
+<ul>
+<li><p>Resource needs (time (&gt; 2 hours), memory (&gt; 8 GB), storage (&gt; 50GB)) <strong>-&gt; Outsource computations, keep own computer free</strong></p></li>
+<li><strong>Server</strong> needs -&gt; cPouta</li>
+<li><strong>Course computers</strong> (same setup) -&gt; Notebooks</li>
+<li><p>It’s <strong>free</strong>! (for open science at Finnish university and state research institute users)</p></li>
+</ul>
+</section>
+<section id="csc-expertise" class="slide level1" data-background-size="contain">
+<h1>CSC expertise</h1>
+<div class="column">
+<p>...at your fingertips:</p>
+<p><a href="https://docs.csc.fi"><code>docs.csc.fi</code></a></p>
+<p><a href="https://research.csc.fi"><code>research.csc.fi</code></a></p>
+</div>
+<div class="column">
+<p><strong>+ servicedesk@csc.fi</strong> <br></br></p>
+<ul>
+<li>Geoinformatics team</li>
+<li>Storage team</li>
+<li>Supercomputer team</li>
+<li>Cloudcomputing team</li>
+<li>Accounts team</li>
+<li>...</li>
+</ul>
+</div>
+</section>
+<section id="csc-projects" class="slide level1" data-background-size="contain">
+<h1>CSC projects</h1>
+<ul>
+<li>necessary for doing anything</li>
+<li>needs 'PI'</li>
+<li>PI applies for CSC project with
+<ul>
+<li>Billing units</li>
+<li>services</li>
+</ul></li>
+</ul>
+<p>Project members share resources, storage and computing storage</p>
+</section>
+<section id="billing-units-bu" class="slide level1" data-background-size="contain">
+<h1>Billing Units (BU)</h1>
+<ul>
+<li>per project</li>
+<li>resources (CPU / GPU amount and time) on supercomputer</li>
+<li>Virtual Machine uptime</li>
+<li>Allas storage amount and time</li>
+</ul>
+</section>
+<section id="my.csc.fi" class="slide level1" data-background-size="contain">
+<h1>my.csc.fi</h1>
+<p><br></br> <a href="https://my.csc.fi"><code>my.csc.fi</code></a> <br></br></p>
+</section>
+<section id="point-clouds" class="slide level1" data-background-size="contain">
+<h1>Point clouds</h1>
+<p><code>set of data points in 3D space</code></p>
+<p><strong>Sources:</strong></p>
+<ul>
+<li>spaceborne / airborne / terrestrial / mobile LiDAR</li>
+<li>photogrammetry (from images: structure from motion / multi view stereo ...)</li>
+</ul>
+<p><strong>File formats:</strong></p>
+<ul>
+<li>ASCII: XYZ, ASC, PTX, ...</li>
+<li>binary: LAS/LAZ , FLS, PCD, ...</li>
+<li>other: PLY, FBX, E57 , OBJ, ...</li>
+</ul>
+</section>
+<section id="software-and-data" class="slide level1" data-background-size="contain">
+<h1>Software and data</h1>
+<p><br></br> <a href="https://hackmd.io/@GeospatialCSC/pointcloud_workshop"><code>hackmd.io/@GeospatialCSC/pointcloud_workshop</code></a> <br></br></p>
+</section>
+<section id="storage-and-sharing-solutions" class="slide level1" data-background-size="contain">
+<h1>Storage and sharing solutions</h1>
+<p><br></br> <a href="https://research.csc.fi/storage"><code>research.csc.fi/storage</code></a> <br></br> <a href="https://paituli.csc.fi/"><code>paituli.csc.fi/</code></a> <br></br></p>
+</section>
+<section id="computing-solutions---puhti" class="slide level1" data-background-size="contain">
+<h1>Computing solutions - Puhti</h1>
+<p align="center">
+<img src="img/puhti_overview.png" width="50%">
+</p>
+</section>
+<section id="puhti-webinterface-demo" class="slide level1" data-background-size="contain">
+<h1>Puhti webinterface demo</h1>
+<p><br></br> <a href="https://puhti.csc.fi"><code>puhti.csc.fi</code></a> <br></br></p>
+</section>
+<section id="example-batch-job-script" class="slide level1" data-background-size="contain">
+<h1>Example batch job script:</h1>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
+<span class="co">#!/bin/bash </span>
+<span class="co">#SBATCH --job-name=myTest </span>
+<span class="co">#SBATCH --account=&lt;project&gt; </span>
+<span class="co">#SBATCH --time=02:00:00</span>
+<span class="co">#SBATCH --cpus-per-task=4 </span>
+<span class="co">#SBATCH --mem-per-cpu=2000 </span>
+<span class="co">#SBATCH --partition=small</span>
+ 
+<span class="ex">module</span> load geoconda
+
+<span class="ex">srun</span> python my_python_script.py input output</code></pre></div>
+</section>
+<section id="computing-resources-for-you" class="slide level1" data-background-size="contain">
+<h1>Computing resources for you*</h1>
+<p align="center">
+<img src="img/puhti_pouta2.png" width="70%">
+</p>
+</section>
+<section id="getting-started" class="slide level1" data-background-size="contain">
+<h1>Getting started</h1>
+<ul>
+<li><a href="https://research.csc.fi/en/accounts-and-projects">Step by step instructions</a></li>
+<li><p><a href="my.csc.fi">Find your account and project information</a></p></li>
+<li><p><a href="https://docs.csc.fi">Read the docs</a></p></li>
+<li><p>check our <a href="https://docs.csc.fi/support/tutorials/">tutorials</a> and <a href="https://github.com/csc-training/geocomputing">geocomputing examples</a></p></li>
+</ul>
+</section>
+<section id="training" class="slide level1" data-background-size="contain">
+<h1>Training</h1>
+<ul>
+<li><a href="https://csc-training.github.io/csc-env-eff/">'Using CSC environment efficiently' course</a></li>
+<li>-&gt; also as <a href="https://ssl.eventilla.com/enveff2022?">interactive course 23.-25.3</a></li>
+<li><a href="https://ssl.eventilla.com/event/pENQa?">Python GIS course 7-10.3</a></li>
+</ul>
+<p>-&gt; follow our <a href="https://www.csc.fi/en/training#training-calendar">training calendar</a></p>
+</section>
+<section id="how-we-can-help" class="slide level1" data-background-size="contain">
+<h1>How we can help</h1>
+<div class="column">
+<ul>
+<li>'Z is not working as expected'</li>
+<li>'my code gives error Y '</li>
+<li>'can A be installed to Puhti?'</li>
+<li>'any advice how to do X?'</li>
+<li>training/example wishes</li>
+</ul>
+<p><strong>-&gt; servicedesk@csc.fi</strong></p>
+<p><a href="https://docs.csc.fi/support/support-howto/">Speed up your request</a></p>
+</div>
+<div class="column">
+<ul>
+<li>Setting up pipelines, product provision, R&amp;D, ...</li>
+</ul>
+<p><strong>-&gt; CSC as project partner / subcontractor</strong></p>
+</div>
+</section>
+<section id="geoinformatics-team" class="slide level1 author-slide" data-background-size="contain" data-background="theme/default/img/author.png">
+<h1>Geoinformatics team</h1>
+<div style="white-space: pre-line;">Kylli Ek
+Samantha Wittke
+CSC – IT Center for Science Ltd.</div>
+<p>giscoord@csc.fi</p>
+<figure>
+<img src="img/geoinf_team.png" />
+</figure>
+</section>
+    </div>
+  </div>
+
+  <script src="https://mlouhivu.github.io/static-engine/reveal/3.5.0/lib/js/head.min.js"></script>
+  <script src="https://mlouhivu.github.io/static-engine/reveal/3.5.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+        height: 1080,
+slideNumber: true,
+                                menu: {
+                                    // Specifies which side of the presentation the menu will 
+                                    // be shown. Use 'left' or 'right'.
+                                    side: 'left',
+                                
+                                    // Add slide numbers to the titles in the slide list.
+                                    // Use 'true' or format string (same as reveal.js slide numbers)
+                                    numbers: false,
+                                
+                                    // Specifies which slide elements will be used for generating
+                                    // the slide titles in the menu. The default selects the first
+                                    // heading element found in the slide, but you can specify any
+                                    // valid css selector and the text from the first matching
+                                    // element will be used.
+                                    // Note: that a section data-menu-title attribute or an element
+                                    // with a menu-title class will take precedence over this option
+                                    titleSelector: 'h1, h2, h3, h4, h5, h6',
+                                
+                                    // Hide slides from the menu that do not have a title.
+                                    // Set to 'true' to only list slides with titles.
+                                    hideMissingTitles: false,
+                                
+                                    // Add markers to the slide titles to indicate the 
+                                    // progress through the presentation
+                                    markers: false,
+                                
+                                    // Specify custom panels to be included in the menu, by
+                                    // providing an array of objects with 'title', 'icon'
+                                    // properties, and either a 'src' or 'content' property.
+                                    custom: false,
+                                
+                                    // Specifies the themes that will be available in the themes
+                                    // menu panel. Set to 'false' to hide themes panel.
+                                    themes: [
+                                        { name: 'CSC', theme: 'theme/csc-2016/csc.css' },
+                                        { name: 'Black', theme: './css/theme/black.css' },
+                                        { name: 'White', theme: './css/theme/white.css' },
+                                        { name: 'League', theme: './css/theme/league.css' },
+                                        { name: 'Sky', theme: './css/theme/sky.css' },
+                                        { name: 'Beige', theme: './css/theme/beige.css' },
+                                        { name: 'Simple', theme: './css/theme/simple.css' },
+                                        { name: 'Serif', theme: './css/theme/serif.css' },
+                                        { name: 'Blood', theme: './css/theme/blood.css' },
+                                        { name: 'Night', theme: './css/theme/night.css' },
+                                        { name: 'Moon', theme: './css/theme/moon.css' },
+                                        { name: 'Solarized', theme: './css/theme/solarized.css' },
+                                    ],
+                                
+                                    // Specifies if the transitions menu panel will be shown.
+                                    transitions: true,
+                                
+                                    // Adds a menu button to the slides to open the menu panel.
+                                    // Set to 'false' to hide the button.
+                                    openButton: true,
+                                
+                                    // If 'true' allows the slide number in the presentation to
+                                    // open the menu panel. The reveal.js slideNumber option must 
+                                    // be displayed for this to take effect
+                                    openSlideNumber: false,
+                                
+                                    // If true allows the user to open and navigate the menu using
+                                    // the keyboard. Standard keyboard interaction with reveal
+                                    // will be disabled while the menu is open.
+                                    keyboard: true,
+                                },
+	                        keyboard: {
+                                    67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+                                    66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+                                    46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+                                     8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+                                    68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+                                },
+
+                                // Chalkboard Button configuration
+                                chalkboard: { 
+                                    src: null,
+                                    readOnly: false,
+                                    toggleChalkboardButton: { left: "100px", bottom: "30px", top: "auto", right: "auto" },
+                                    toggleNotesButton: { left: "70px", bottom: "30px", top: "auto", right: "auto" },
+                                },
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://mlouhivu.github.io/static-engine/reveal/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://mlouhivu.github.io/static-engine/reveal/3.5.0/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://mlouhivu.github.io/static-engine/reveal/3.5.0/plugin/notes/notes.js', async: true },
+          { src: 'https://mlouhivu.github.io/static-engine/reveal/3.5.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[dataa--markdown]' ); } },
+          { src: './plugin/menu/menu.js' },
+          // Chalkboard
+          { src: './plugin/chalkboard/chalkboard.js' },
+        ]
+      });
+    </script>
+    </body>
+</html>
