@@ -2,6 +2,8 @@
 
 ORIGINALLY FROM https://github.com/yetulaxman/recipe-slideprep
 
+This is a template repository, use by clicking "use this template".
+
 This repository enables the use of  the following plugins on the top of [CSC-customised slide-template](https://github.com/csc-training/slide-template.git):
 
 * [reveal.js-menu](https://github.com/denehyg/reveal.js-menu): Adds a menu to
@@ -13,10 +15,10 @@ One can generate HTML files from markdown files either in cPouta or Puhti or eve
 
 ### Create HTML file in cPouta environment using singularity
 
-1. Clone the current github repository in cPouta VM
+1. Clone the your repo created from template  to cPouta VM
 
 ```
-git clone https://github.com/yetulaxman/recipe-slideprep.git
+git clone https://github.com/yourownrepo.git
 ```
 2. Build (or download) singularity image 
 ```
@@ -36,11 +38,11 @@ singularity run slidefactory.simg  demo.md
 
 ### Create HTML file in Puhti using singularity
 
-Clone current github repository to Puhti (e.g., to some directory: /scratch/project_xxxx/) 
+Clone your own github repository created from template to Puhti (e.g., to some directory: /scratch/project_xxxx/) 
 
 
 ```
-git clone https://github.com/yetulaxman/recipe-slideprep.git
+git clone https://github.com/yourownrepo.git
 cd recipe-slideprep
 ```
 
